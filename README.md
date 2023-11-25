@@ -1,33 +1,41 @@
 # sacair-satelite-competition
 SACAIR 2023 Satellite Image Classification Competition
 
-Scikit-image: Offers various functions for image processing and feature extraction.
-Rasterio: Handling geospatial raster data.
-OpenCV: Provides a wide range of image processing functions.
-Scikit-learn: Contains modules for feature extraction, dimensionality reduction, and classification.
+
+
+## Data files flow
+- data
+   - data
+      - cloudy
+      - desert
+      - water
+      - green_area
+   - sacair_data
 
 
 
-1. **Spectral Bands:**
-   - Satellite images typically consist of multiple spectral bands (e.g., Red, Green, Blue, Near Infrared, etc.). Statistical measures (mean, standard deviation, minimum, maximum) or spectral indices (NDVI - Normalized Difference Vegetation Index, NDWI - Normalized Difference Water Index) computed from these bands can be powerful features.
+## how to run code
+- make sure you have python programming language isntalled on the machine
+- if you're using python3.4 or later pip is install by default
+- if you prefer to use docker or conda, to run the code, please check the links provided
+- conda: https://conda.io/projects/conda/en/latest/user-guide/getting-started.html
+- docker: https://www.docker.com/get-started/ 
+- but if you prefer pip and **virtualenv**, please follow the points below
+- install virtualenv on your machine: pip install virtualenv
+- create a virtual env in the root folder
+- macbook / linux: python3 -m virtualenv env
+- windows : python -m virtualenv env
+- activate the environment
+- macbook / linux: source env/bin/activate
+- windows: .\env\Script\activate
+- install packages / libraries in the requirments.txt file in the created env: pip install -r requirements.txt
+- make sure to pick the right env in the notebook
+- make sure the files/images are place in the right folder
 
-2. **Texture Features:**
-   - Haralick texture features, Gabor filters, or local binary patterns (LBP) can capture textural information within an image, useful for distinguishing between various land cover types (e.g., forest, urban, water bodies).
 
-3. **Shape and Structure:**
-   - Features like object size, shape descriptors (e.g., circularity, elongation), and structural elements (e.g., building footprints, roads) extracted using segmentation techniques or object detection algorithms can be valuable.
-
-4. **Spatial Features:**
-   - Spatial relationships among pixels or regions can be crucial. Features like spatial autocorrelation, Moran's I, or Geary's C capture the spatial dependency among neighboring pixels.
-
-5. **Principal Component Analysis (PCA) or Dimensionality Reduction:**
-   - Reduce the dimensionality of multi-band data while retaining essential information. PCA can be used to transform the spectral bands into a smaller set of uncorrelated variables.
-
-6. **Convolutional Neural Network (CNN) Features:**
-   - Utilize pre-trained CNN models (like VGG, ResNet, etc.) and extract features from intermediate layers. Transfer learning can capture hierarchical features learned from large datasets.
-
-7. **DCT or Fourier Transform Coefficients:**
-   - Extract frequency-based features using DCT or Fourier Transform, which could capture specific patterns in different frequency domains.
-
-8. **Land Use/Land Cover (LULC) Indices:**
-   - Indices like Land Use/Land Cover classifications, which categorize land into classes (e.g., agriculture, forest, urban) can serve as features.
+## files to run
+- when the data files are places as described above. the CSV files will match images locations from the file
+- in the convnet.ipynb
+- select the right env
+- run all to test the codes
+- 
